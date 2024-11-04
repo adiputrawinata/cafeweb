@@ -159,13 +159,19 @@ header nav a:hover {
 /* Gallery */
 .gallery {
     display: flex;
-    justify-content: center;
     gap: 10px;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 .gallery img {
-    width: 30%;
+    flex: 0 0 auto; 
+    width: 300px; 
+    height: auto;
     border-radius: 8px;
+    scroll-snap-align: start;
 }
 
 /* Social Media Icons in Contact Section */
@@ -279,5 +285,22 @@ footer {
     }
     .logo-hero {
         width: 100px;
+    }
+}
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .gallery {
+        overflow-x: hidden; /* Disable scrolling on larger screens */
+        flex-wrap: wrap; /* Wrap images in rows */
+        justify-content: center;
+    }
+    .gallery img {
+        width: 30%; /* 3 images per row on larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        width: 80%; /* Wider images for better visibility on mobile */
     }
 }
