@@ -7,3 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+function toggleMenu() {
+    const nav = document.querySelector('header nav');
+    nav.classList.toggle('active');
+}
