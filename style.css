@@ -161,17 +161,17 @@ header nav a:hover {
     display: flex;
     gap: 10px;
     overflow-x: auto; 
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory; 
     padding: 20px 0;
     -webkit-overflow-scrolling: touch;
 }
 
 .gallery img {
     flex: 0 0 auto; 
-    width: 300px; 
+    width: 80vw; 
     height: auto;
     border-radius: 8px;
-    scroll-snap-align: start;
+    scroll-snap-align: center; 
 }
 
 /* Social Media Icons in Contact Section */
@@ -267,7 +267,7 @@ footer {
 /* Responsive adjustments for hero section */
 @media (min-width: 768px) {
     .hero-content {
-        flex-direction: row; /* Align items horizontally on larger screens */
+        flex-direction: row;
         gap: 40px;
         text-align: left;
     }
@@ -290,17 +290,17 @@ footer {
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .gallery {
-        overflow-x: hidden; /* Disable scrolling on larger screens */
-        flex-wrap: wrap; /* Wrap images in rows */
+        overflow-x: hidden; 
+        flex-wrap: wrap;
         justify-content: center;
     }
     .gallery img {
-        width: 30%; /* 3 images per row on larger screens */
+        width: 30%;
     }
 }
 
 @media (max-width: 480px) {
     .gallery img {
-        width: 80%; /* Wider images for better visibility on mobile */
+        width: 80%; 
     }
 }
